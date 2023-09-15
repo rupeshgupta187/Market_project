@@ -1,0 +1,187 @@
+<html>
+{% load static %}
+<head></head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+      <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet"/>
+      <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet"/>
+      <link href="{% static 'css/all.css'%}" rel="stylesheet"/>
+      <script src="{% static 'js/bootstrap.js'%}"></script>
+      <script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+
+    <style>
+        .bg-ocolor{
+        background:#FF8800;
+        }
+         .text-oclr{
+            color:#FF8800;
+        }
+        .bg-bcolor{
+        background:#2E2E2E;
+        }
+        .text-clr{
+        color:#2E2E2E;
+        }
+        #menu ul li a{
+        font-size:15px;
+        color:white;
+        border-radius:5px;
+        margin-left: 14px;
+        }
+        #menu ul li a:hover{
+        background:gray;
+
+        }
+    </style>
+
+</head>
+<body>
+<div class="row top bg-bcolor text-light px-5 text-center  pt-1">
+    <div class="col-sm-4 fs-6">
+        <i class="fa-solid fa-phone "></i> +91 818880983
+    </div>
+    <div class="col-sm-4 fs-6">
+        <marquee width="100%" behavior="scroll" bgcolor="light" direction="left">welcome to the market bazaar</marquee>
+    </div>
+    <div class="col-sm-4">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook text-oclr fs-6 ms-2"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram text-oclr fs-6 ms-2"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin text-oclr fs-6 ms-2"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube text-oclr fs-6 ms-2"></i></a>
+        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter text-oclr fs-6 ms-2"></i></a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4 ">
+        <h4 class="text-center fs-4"><i class="fa-solid fa-cart-shopping text-oclr py-4 fs-4 "></i> Market Bazaar</h4>
+    </div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4  text-center">
+      <button type="button" class="btn btn-primary btn bg-ocolor  m-4 fs-6">
+         Cart  <i class="fa-solid fa-cart-shopping"></i> &nbsp;<span class="badge text-bg-secondary">4</span>
+      </button>
+    </div>
+    
+
+</div>
+
+<div class="row bg-dark text-light">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 ">
+        <nav class="navbar navbar-expand-lg text-light bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand text-oclr rounded-2 px-2" href="#">Bazaar</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/user/index/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/about/">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle bg-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Product
+          </a>
+          <ul class="dropdown-menu bg-dark">
+            <li><a class="dropdown-item " href="/user/mens/">Men's</a></li>
+            <li><a class="dropdown-item" href="/user/womens/">Women's</a></li>
+            <li><a class="dropdown-item" href="/user/kids/">Kid's</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">Home & Furniture</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link " href="/user/myorder/">Myorder</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link " href="/user/contact/">SignUp</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link " href="signin">Signin</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+{% block body %}
+
+
+{% endblock %}
+<div class=" row ufooter bg-bcolor ">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3   py-3 text-light text-justify">
+            <h5 class="text-light py-3 txt_wcolor ">Market India <b class="txt_wcolor"> <i class="fa-solid fa-cart-shopping"></i></b></h5>
+            <h6>Contact <b class="txt_wcolor">Us</b></h6>
+            <p class="py-1">Address: Kushinagar,Uttar Pradesh 274305</p>
+            <p class="py-1">Phone no: 8188809283 || 9369513622 </p>
+            <p class="py-1">Email : rupeshgupta8188@gmail.com </p>
+            <span class="py-2 ms-5 ">
+                <a href="http://www.facebook.com"><i class="fa-brands fa-square-facebook me-2 fs-4 bfav"></i></a>
+                <a hraf="http://www.facebook.com"><i class="fa-brands fa-square-twitter fs-4 me-2 bfav"></i></a>
+                <a hraf="http://www.facebook.com"><i class="fa-brands fa-square-instagram  fs-4 me-2 bfav"></i></a>
+                <a hraf="http://www.facebook.com"><i class="fa-brands fa-linkedin me-2  fs-4 bfav"></i></a>
+                <a hraf="http://www.facebook.com"><i class="fa-brands fa-square-youtube me-2  fs-4 bfav"></i></a>
+            </span>
+        </div>
+        <div class="col-sm-2 text-light py-5">
+            <h5 class="my-3">Services</h5>
+            <ul>
+
+            <li class="my-3">Fast Delivery</li>
+            <li  class="my-3">Return Policy</li>
+            <li  class="my-3">Product Quality</li>
+            <li  class="my-3">Secure Payment</li>
+            </ul>
+
+        </div>
+        <div class="col-sm-2  text-light py-5">
+             <h5 class="my-3">MyAccount</h5>
+            <ul>
+            <li class="my-3">My Account</li>
+            <li  class="my-3">Shopping Cart</li>
+            <li  class="my-3">Contact US</li>
+            <li  class="my-3">By Everywhere</li>
+                </ul>
+
+        </div>
+        <div class="col-sm-3  mt-3">
+            <h5 class="text-light mt-5">Join now our newsletter</h5>
+            <p class="my-4 text-light">Get E-mail update about our shop and soecial offer</p>
+              <div class="input-group mb-3">
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Enter your E-mail" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <span class="input-group-text txt_wcolor" id="basic-addon2">Subscribe now</span>
+</div>
+            </div>
+        </h4>
+        <div class="col-sm-1  "></div>
+    </div>
+    <div class="row bfooter bg-bcolor " style="border-top:2px solid white;">
+    <div div class="col-sm-6 ps-5 "> Developed By : &nbsp; <a href="#">Rupesh Gupta</a></div>
+    <div div class="col-sm-6 ps-5">
+      &copy; Copyright to : &nbsp<a href ="htttp://www.techpile.in" class="wcolor ">Techpile technology</a>
+    </div>
+</div>
+    </div>
+
+</body>
+</html>
+</body>
+</html>

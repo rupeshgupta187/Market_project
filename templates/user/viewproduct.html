@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block body%}
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <div class="row">
+            {% for i in pdata %}
+            <div class="col-sm-12 p-5" style="padding:30px;">
+                  <div class="card mb-3 w-100">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="/{{i.pimage}" class="img-fluid rounded-start border border-2" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body ms-3">
+                        <h5 class="card-title">{{i.pname}}</h5>
+                        <p class="card-text" style="min-height:80px;">{{i.pdesc}}</p>
+                          <div><i class="fa-solid fa-indian-rupee-sign"></i> {{i.pprice}}/-</div>
+                          <div class="mt-1 ms-1" style=" height:20px; width:20px; background:{{i.pcolor}}"> </div>  <br/>  <br/>
+                          <a href="/user/viewproduct?abc={{a.id}}" class="btn bg-ocolor ">Order Now</a>&nbsp;&nbsp;
+
+                          <a href="" class="btn bg-ocolor ms-4">
+                               Cart<i class="fa-solid fa-cart-shopping"></i>
+                           </a></br>
+
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+{% endblock %}

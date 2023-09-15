@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block body %}
+<div class="fs-2 text-center mt-2">Men's <span class="text-oclr">Product</span></div>
+<div class="row">
+    <div class="col-sm-9">
+        <div class="row">
+            {% for a in mdata%}
+            <div class="col-sm-4 my-2 p-4 ">
+                <div class="card bg-light ">
+                    <img src="/{{a.pimage}}" class="img-card-top img-fluid" style="max-height:200px;"/>
+                    <div class="card-body">
+                        <h5 class="card-title">{{a.macategory}}</h5>
+                        <hr class="divider"/>
+                        <b class="btn btn bg-wcolor">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </b>
+                        <b class="fs-4 text-danger"><s>{{a.pprice}}/-</s></b>&nbsp;
+                        <b class="fs-4 text-success me-2">{{a.dprice}}/-</b>
+                        <div style="height:20px; width:20px; background:{{a.pcolor}};border-radius:2px;"
+                             class="float-end mt-2"></div>
+                        <hr class="divider"/>
+                        <span class="text-muted fs-4">{{a.delivery}}</span><br/></br>
+                        <a href="/user/viewproduct?msg={{a.id}}" class="btn bg-ocolor ">Order Now</a>&nbsp;&nbsp;
+                        <a href="/user/showcart?pid={{a.id}}" class="btn bg-ocolor ms-4">
+                            Cart<i class="fa-solid fa-cart-shopping"></i>
+                        </a></br>
+                    </div>
+                </div>
+            </div>
+             {% endfor %}
+
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="row">
+            <div class="col-sm-12 my-3">
+                <ul class="list-group">
+                    <li class="list-group-item bg-dark text-light fw-bold text-center">Product Category</li>
+                    <li class="list-group-item ">
+                        <!-- start card ---->
+                        {% for x in pdata%}
+                        <div class="card mb-3 w-100">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="/{{x.Mpic}}" style="max-height:70px; width:100%; border-right:1px solid gray;" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{x.Name}}</h5>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- start card ---->
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
